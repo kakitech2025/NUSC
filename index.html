@@ -386,10 +386,12 @@ footer .wrap{position:relative;z-index:2}
 .f-brand{display:flex;gap:16px;align-items:flex-start}
 .f-brand .fm{width:76px;height:76px;background:var(--logo) center/contain no-repeat;flex:none}
 .f-brand h3{font-size:1.7rem;line-height:.95}
-.f-brand .mot{color:var(--red-bright);font-family:Inter;font-weight:800;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;margin-top:8px}
+.f-brand>div{min-width:0}
+.f-brand .mot{color:var(--red-bright);font-family:Inter;font-weight:800;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;margin-top:8px;line-height:1.5;overflow-wrap:anywhere}
 .f-brand .mot span{color:#7f90ab}
+.f-col{min-width:0}
 .f-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#8fa1bd;font-family:Inter;font-weight:800;margin-bottom:16px}
-.f-col a,.f-col p{display:block;color:#c3d0e4;font-size:.92rem;line-height:1.5;margin-bottom:9px;transition:color .2s}
+.f-col a,.f-col p{display:block;color:#c3d0e4;font-size:.92rem;line-height:1.5;margin-bottom:9px;transition:color .2s;overflow-wrap:anywhere;word-break:break-word}
 .f-col a:hover{color:#fff}
 .socials{display:flex;gap:10px;margin-top:4px}
 .socials a{width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:5px;display:grid;place-items:center;color:#c3d0e4;transition:.22s var(--ease)}
@@ -446,6 +448,9 @@ footer .wrap{position:relative;z-index:2}
   .pathway .flow,.pl-grid,.scholars,.awards,.mgrid{grid-template-columns:1fr}
   .pcard{align-items:flex-start}
   .champ-word{font-size:34vw}
+  .f-top{grid-template-columns:1fr;gap:30px}
+  .f-brand{grid-column:auto}
+  .f-brand .fm{width:64px;height:64px}
   .legal{flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){
@@ -860,7 +865,6 @@ footer .wrap{position:relative;z-index:2}
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.4 2L12 12.3 19.6 7H4.4ZM20 8.3l-8 5.6-8-5.6V17h16V8.3Z"/></svg>
           </a>
         </div>
-        <p class="pend">X / Twitter &amp; YouTube — handles to confirm</p>
       </div>
     </div>
     <div class="legal">
