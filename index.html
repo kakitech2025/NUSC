@@ -362,36 +362,41 @@ p{line-height:1.7}
 
 /* ---------- Careers ---------- */
 .careers{background:var(--paper)}
-.req-bar{display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:relative;overflow:hidden;
-  background:linear-gradient(135deg,var(--navy-800),var(--navy-950));color:#fff;border-radius:10px;padding:22px 28px;margin-bottom:22px}
-.req-bar .burst::before{opacity:.3;top:40%;left:88%}
-.req-bar .rb-badge{position:relative;z-index:2;flex:none;font-family:"Barlow Condensed";font-weight:800;font-size:.82rem;
-  letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:#fff;padding:8px 15px;border-radius:4px}
-.req-bar .rb-text{position:relative;z-index:2;font-size:1.02rem;color:#dbe4f1;line-height:1.5}
-.req-bar .rb-text b{color:#fff;font-weight:700}
+.career-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.cm{display:inline-flex;align-items:center;gap:.55em;font-size:.82rem;font-weight:600;color:var(--navy-800);
+  background:#fff;border:1px solid var(--line-l);border-radius:22px;padding:9px 16px}
+.cm svg{width:15px;height:15px;fill:none;stroke:var(--red);stroke-width:2;flex:none}
+.cm.accent{background:var(--navy-950);color:#fff;border-color:transparent}
+.cm.accent svg{stroke:var(--red-bright)}
 .jobs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .job{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line-l);border-radius:10px;padding:26px 28px;
-  display:flex;flex-direction:column;gap:12px;transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s}
+  display:flex;flex-direction:column;gap:14px;transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s}
 .job::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--navy-800);transition:background .22s}
 .job:hover{transform:translateY(-5px);box-shadow:0 24px 44px -26px rgba(13,28,56,.4);border-color:#cdd8ea}
 .job:hover::before{background:var(--red)}
-.job h3{font-size:1.6rem;color:var(--navy-800);line-height:1.02}
-.job p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
-.job .job-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:6px}
-.job .lic{font-size:.64rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);
-  background:var(--paper);border:1px solid var(--line-l);padding:6px 11px;border-radius:20px}
-.job .apply{font-weight:800;font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--red);
-  display:inline-flex;gap:.4em;align-items:center;transition:gap .2s var(--ease)}
-.job .apply:hover{gap:.75em}
+.job h3{font-size:1.55rem;color:var(--navy-800);line-height:1.05}
+.job .role-desc{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.job .reqs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.job .reqs li{position:relative;padding-left:18px;font-size:.86rem;color:var(--muted);line-height:1.45}
+.job .reqs li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--red);opacity:.8}
+.job .reqs li b{color:var(--navy-800);font-weight:700}
+.job .job-foot{margin-top:auto;padding-top:4px}
+.job .apply{display:inline-flex;align-items:center;gap:.5em;background:var(--red);color:#fff;font-weight:800;font-size:.74rem;
+  letter-spacing:.09em;text-transform:uppercase;padding:12px 20px;border-radius:4px;
+  transition:transform .2s var(--ease),background .2s,box-shadow .2s}
+.job .apply:hover{background:var(--red-bright);transform:translateY(-2px);box-shadow:0 12px 24px -8px rgba(227,31,43,.65)}
+.job .apply .ar{transition:transform .2s var(--ease)}
+.job .apply:hover .ar{transform:translateX(3px)}
 .job-lead{grid-column:1/-1;border-color:transparent;color:#fff;
   background:radial-gradient(80% 130% at 90% 12%,rgba(227,31,43,.4),transparent 55%),linear-gradient(140deg,var(--navy-700),var(--navy-950))}
 .job-lead .burst::before{opacity:.32;top:34%;left:80%}
-.job-lead>*{position:relative;z-index:2}
+.job-lead .role-tag,.job-lead h3,.job-lead .role-desc,.job-lead .reqs,.job-lead .job-foot{position:relative;z-index:2}
 .job-lead .role-tag{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red-bright)}
 .job-lead h3{color:#fff;font-size:clamp(1.9rem,2.6vw,2.3rem)}
-.job-lead p{color:#c3d0e4;max-width:640px}
-.job-lead .lic{color:#cdd8ea;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
-.job-lead .apply{color:#fff}
+.job-lead .role-desc{color:#c3d0e4;max-width:640px}
+.job-lead .reqs li{color:#c3d0e4}
+.job-lead .reqs li::before{background:var(--red-bright);opacity:1}
+.job-lead .reqs li b{color:#fff}
 .apply-cta{margin-top:20px;position:relative;overflow:hidden;border-radius:10px;color:#fff;padding:clamp(30px,3.4vw,44px);
   background:radial-gradient(90% 140% at 88% 10%,rgba(227,31,43,.45),transparent 55%),linear-gradient(140deg,var(--navy-800),var(--navy-950))}
 .apply-cta .burst::before{opacity:.28;top:16%;left:86%}
@@ -401,6 +406,9 @@ p{line-height:1.7}
 .apply-cta p{color:#cdd9ea;font-size:1.04rem;margin:0 0 22px;overflow-wrap:anywhere}
 .apply-cta p a{color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.45)}
 .apply-cta p a:hover{border-color:#fff}
+.apply-cta .ac-meta{color:#a9bbd6;font-size:.86rem;margin:0 0 22px;letter-spacing:.01em}
+.apply-cta .ac-meta b{color:#fff;font-weight:700}
+.apply-cta .ac-eo{color:#8fa1bd;font-size:.8rem;margin:20px 0 0;line-height:1.55;max-width:640px;border-top:1px solid rgba(255,255,255,.1);padding-top:18px}
 
 /* ---------- Support band ---------- */
 .support{position:relative;overflow:hidden;background:var(--red);color:#fff}
@@ -855,56 +863,75 @@ footer .wrap{position:relative;z-index:2}
     <div class="shead">
       <div class="reveal">
         <div class="eyebrow red">Careers · We're Hiring</div>
-        <h2 class="h2">Join the staff.</h2>
+        <h2 class="h2">Technical &amp;<br>medical staff.</h2>
       </div>
-      <p class="lede reveal d1">NUSC is strengthening its football department and recruiting experienced coaching and sports-medicine staff to help drive the next stage of the club's journey.</p>
+      <p class="lede reveal d1">As NUSC steps into national-tier football, we're building a team to match our ambition — recruiting across coaching, sports science and medicine. Join us.</p>
     </div>
-    <div class="req-bar reveal">
-      <div class="burst" aria-hidden="true"></div>
-      <span class="rb-badge">Requirement</span>
-      <span class="rb-text">All positions require a valid <b>AFC A License</b>. An <b>AFC Pro License</b> is strongly preferred.</span>
+    <div class="career-meta reveal">
+      <span class="cm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Based in Dimapur / Chümoukedima, Nagaland</span>
+      <span class="cm accent"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/></svg>Applications close — September 2026</span>
+      <span class="cm">Equal opportunity employer</span>
     </div>
     <div class="jobs">
       <article class="job job-lead reveal">
         <div class="burst" aria-hidden="true"></div>
         <div class="role-tag">First Team</div>
         <h3>First-Team Head Coach</h3>
-        <p>Lead the senior squad's football philosophy, training programme, matchday management and overall on-pitch performance.</p>
+        <p class="role-desc">Lead the First Team's tactical direction, matchday decisions and overall football philosophy.</p>
+        <ul class="reqs">
+          <li><b>AFC A License</b> required — AFC Pro License preferred</li>
+          <li>3–5 years' coaching at senior / professional or elite academy level</li>
+        </ul>
         <div class="job-foot">
-          <span class="lic">AFC A required · Pro preferred</span>
-          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20First-Team%20Head%20Coach%20%E2%80%94%20NUSC">Apply →</a>
+          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20First-Team%20Head%20Coach%20%E2%80%94%20NUSC&amp;body=Please%20attach%20your%20CV%2C%20certifications%20and%20a%20short%20cover%20letter%20(including%20your%20salary%20expectations).">Apply by Email <span class="ar">→</span></a>
         </div>
       </article>
       <article class="job reveal">
         <h3>Assistant Coach</h3>
-        <p>Support the head coach across training design, opposition analysis and day-to-day player development.</p>
+        <p class="role-desc">Support the Head Coach in training design, matchday preparation and squad management.</p>
+        <ul class="reqs">
+          <li><b>AFC A License</b> required — AFC Pro License preferred</li>
+          <li>2–3 years' coaching at senior or elite youth level</li>
+        </ul>
         <div class="job-foot">
-          <span class="lic">AFC A required</span>
-          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Assistant%20Coach%20%E2%80%94%20NUSC">Apply →</a>
+          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Assistant%20Coach%20%E2%80%94%20NUSC&amp;body=Please%20attach%20your%20CV%2C%20certifications%20and%20a%20short%20cover%20letter%20(including%20your%20salary%20expectations).">Apply by Email <span class="ar">→</span></a>
         </div>
       </article>
       <article class="job reveal d1">
         <h3>Goalkeeping Coach</h3>
-        <p>Develop the club's goalkeepers with specialist technical, tactical and positional training.</p>
+        <p class="role-desc">Oversee the technical, tactical and physical development of the club's goalkeepers.</p>
+        <ul class="reqs">
+          <li><b>AFC Goalkeeping B Diploma</b> required — GK A Diploma preferred</li>
+          <li>2+ years coaching goalkeepers at senior or elite academy level</li>
+        </ul>
         <div class="job-foot">
-          <span class="lic">AFC A required</span>
-          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Goalkeeping%20Coach%20%E2%80%94%20NUSC">Apply →</a>
+          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Goalkeeping%20Coach%20%E2%80%94%20NUSC&amp;body=Please%20attach%20your%20CV%2C%20certifications%20and%20a%20short%20cover%20letter%20(including%20your%20salary%20expectations).">Apply by Email <span class="ar">→</span></a>
         </div>
       </article>
       <article class="job reveal">
         <h3>Strength &amp; Conditioning Coach</h3>
-        <p>Lead the squad's physical preparation, fitness, load management and recovery.</p>
+        <p class="role-desc">Design and deliver strength, conditioning and injury-prevention programmes for the squad.</p>
+        <ul class="reqs">
+          <li>Degree in <b>Sports / Exercise Science</b> or a related field</li>
+          <li><b>NSCA-CSCS</b> (or equivalent) certification preferred</li>
+          <li>2+ years with football or elite team-sport athletes</li>
+          <li>Skilled in periodisation, GPS / load monitoring and return-to-play</li>
+        </ul>
         <div class="job-foot">
-          <span class="lic">AFC A required</span>
-          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Strength%20and%20Conditioning%20Coach%20%E2%80%94%20NUSC">Apply →</a>
+          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Strength%20and%20Conditioning%20Coach%20%E2%80%94%20NUSC&amp;body=Please%20attach%20your%20CV%2C%20certifications%20and%20a%20short%20cover%20letter%20(including%20your%20salary%20expectations).">Apply by Email <span class="ar">→</span></a>
         </div>
       </article>
       <article class="job reveal d1">
-        <h3>Physio</h3>
-        <p>Manage injury prevention, on-field response, treatment and rehabilitation across the squad.</p>
+        <h3>Physiotherapist</h3>
+        <p class="role-desc">Manage injury prevention, treatment and rehabilitation for the first-team squad.</p>
+        <ul class="reqs">
+          <li><b>BPT / MPT</b> — Sports Physiotherapy specialisation preferred</li>
+          <li>Registered with the <b>IAP</b> or State Physiotherapy Council</li>
+          <li>2+ years' clinical experience, ideally in sport or football</li>
+          <li>Sports injury management, taping and on-field emergency response</li>
+        </ul>
         <div class="job-foot">
-          <span class="lic">AFC A required</span>
-          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Physio%20%E2%80%94%20NUSC">Apply →</a>
+          <a class="apply" href="mailto:nagalandunitedsportsclub@gmail.com?subject=Application%20%E2%80%94%20Physiotherapist%20%E2%80%94%20NUSC&amp;body=Please%20attach%20your%20CV%2C%20certifications%20and%20a%20short%20cover%20letter%20(including%20your%20salary%20expectations).">Apply by Email <span class="ar">→</span></a>
         </div>
       </article>
     </div>
@@ -912,9 +939,11 @@ footer .wrap{position:relative;z-index:2}
       <div class="burst" aria-hidden="true"></div>
       <div class="ac-in">
         <div class="tag">How To Apply</div>
-        <h3>Send us your CV.</h3>
-        <p>Email your CV and coaching or medical certifications to <a href="mailto:nagalandunitedsportsclub@gmail.com?subject=NUSC%20Staff%20Application">nagalandunitedsportsclub@gmail.com</a>, with the role you are applying for in the subject line. Every application is reviewed.</p>
-        <a class="btn btn-red btn-lg" href="mailto:nagalandunitedsportsclub@gmail.com?subject=NUSC%20Staff%20Application">Email Your Application <span class="ar">→</span></a>
+        <h3>Send us your application.</h3>
+        <p>Email your CV, certifications and a short cover letter — including your salary expectations — to <a href="mailto:nagalandunitedsportsclub@gmail.com?subject=NUSC%20Staff%20Application">nagalandunitedsportsclub@gmail.com</a>, with the role you are applying for in the subject line.</p>
+        <p class="ac-meta"><b>Deadline:</b> September 2026&nbsp;&nbsp;·&nbsp;&nbsp;<b>Location:</b> Dimapur / Chümoukedima, Nagaland</p>
+        <a class="btn btn-red btn-lg" href="mailto:nagalandunitedsportsclub@gmail.com?subject=NUSC%20Staff%20Application&amp;body=Role%20applied%20for%3A%20%0A%0APlease%20attach%20your%20CV%2C%20certifications%20and%20a%20short%20cover%20letter%20(including%20your%20salary%20expectations).">Email Your Application <span class="ar">→</span></a>
+        <p class="ac-eo">Nagaland United Sports Club is an equal opportunity employer. We welcome qualified candidates from Nagaland and across India.</p>
       </div>
     </div>
   </div>
